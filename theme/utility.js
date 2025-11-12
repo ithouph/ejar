@@ -11,6 +11,11 @@ export const u = StyleSheet.create({
   alignEnd: { alignItems: "flex-end" },
   justifyContent: { justifyContent: "center" },
 
+  // navbar
+  navItem: { alignItems: "center" },
+  navLabel: { fontSize: 12, color: "#8e8e8e", marginTop: 3,},
+  navLabelActive: { color: "#044468", fontWeight: "600"},
+
   // Spacing - padding
   p0: { padding: 0 },
   p5: { padding: 5 },
@@ -68,14 +73,36 @@ export const u = StyleSheet.create({
   border: { borderColor: "#0059ff18", borderBottomWidth: 1 },
 
   // Buttons
-  btn: { padding: 15, borderRadius: 8, alignItems: "center", justifyContent: "center" },
+  btn: {
+    padding: 15,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   btnText: { fontSize: 16, fontWeight: "bold" },
   btnTxt: { fontSize: 16, fontWeight: "bold" },
-  btnOutline: { padding: 15, borderRadius: 8, borderWidth: 1, alignItems: "center", justifyContent: "center" },
-  btnScecondary: { padding: 15, borderRadius: 8, alignItems: "center", justifyContent: "center" },
+  btnOutline: {
+    padding: 15,
+    borderRadius: 8,
+    borderWidth: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  btnScecondary: {
+    padding: 15,
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 
   // Input
-  inp: { borderWidth: 1, borderRadius: 12, padding: 15, marginBottom: 15, fontSize: 16 },
+  inp: {
+    borderWidth: 1,
+    borderRadius: 12,
+    padding: 15,
+    marginBottom: 15,
+    fontSize: 16,
+  },
 
   // Card / Containers
   card: { borderRadius: 12, overflow: "hidden", marginBottom: 10 },
@@ -83,33 +110,53 @@ export const u = StyleSheet.create({
 
 // ✅ Dynamic styles helper (use colors here)
 export const createStyles = (colors = {}) => ({
-  txt: { color: colors.txt  },
+  txt: { color: colors.txt },
   textSecondary: { color: colors.textSecondary },
   link: { color: colors.link },
 
-  background: { backgroundColor: colors.background},
+  background: { backgroundColor: colors.background },
 
   // Inputs
   inp: {
     backgroundColor: colors.inpbg,
     borderColor: colors.inpbc,
-    color: colors.txt ,
+    color: colors.txt,
   },
   btnPrimary: {
     color: colors.btnPrimary,
   },
   // Buttons
-  btn: { backgroundColor: colors.primary, alignItems: "center", justifyContent: "center" },
+  btn: {
+    backgroundColor: colors.primary,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   btnText: { fontWeight: "bold", color: colors.btnText },
   btnTxt: { color: colors.btnTxt, fontWeight: "bold" },
-  btnOutline: { borderColor: colors.border, borderWidth: 1, alignItems: "center", justifyContent: "center" },
-  btnScecondary: { backgroundColor: colors.btnScecondary, color: colors.txt, alignItems: "center", justifyContent: "center" },
+  btnOutline: {
+    borderColor: colors.border,
+    borderWidth: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  btnScecondary: {
+    backgroundColor: colors.btnScecondary,
+    color: colors.txt,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 
   // Containers
   container: { flex: 1, padding: 20, backgroundColor: colors.background },
 
   // Card
-  card: { backgroundColor: colors.cardBg, borderColor: colors.border, borderWidth: 1, overflow: "hidden", marginBottom: 10 },
+  card: {
+    backgroundColor: colors.cardBg,
+    borderColor: colors.border,
+    borderWidth: 1,
+    overflow: "hidden",
+    marginBottom: 10,
+  },
   cardImage: { width: "100%", height: 200 },
   rightIcons: { flexDirection: "row", gap: 10 },
   iconBtn: {
@@ -117,5 +164,4 @@ export const createStyles = (colors = {}) => ({
     padding: 8,
     borderRadius: 30,
   },
-
 });
