@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { View, Text, ScrollView } from "react-native";
-import { useTheme } from "../theme/global";
-import Details from "./Details";
+// import components
+import Detail from "../pages/Detail";
 import Card from "../components/Card";
+// import theme hook
+import { useTheme } from "../theme/global";
 
 export default function Discover({ setPage }) {
   const { colors, styles, u } = useTheme();
+  
   const [selected, setSelected] = useState(null);
 
   const savedList = [
@@ -15,7 +18,13 @@ export default function Discover({ setPage }) {
       price: "$1,850+",
       name: "Skyline Apartments",
       address: "233 St Perry Ave, Dallas, TX",
-      details: ["1-3 Bedrooms", "1-2 Bathrooms", "90m²", "Furnished", "Balcony"],
+      details: [
+        "1-3 Bedrooms",
+        "1-2 Bathrooms",
+        "90m²",
+        "Furnished",
+        "Balcony",
+      ],
       phone: "+11234567890",
       whatsapp: "+11234567890",
       owner: { name: "John Doe", rating: 4.7 },
@@ -26,7 +35,13 @@ export default function Discover({ setPage }) {
       price: "$2,330+",
       name: "The Modern",
       address: "1000 Rentpath Way, Atlanta, GA",
-      details: ["2-4 Bedrooms", "1-3 Bathrooms", "120m²", "Newly Renovated", "City View"],
+      details: [
+        "2-4 Bedrooms",
+        "1-3 Bathrooms",
+        "120m²",
+        "Newly Renovated",
+        "City View",
+      ],
       phone: "+19876543210",
       whatsapp: "+19876543210",
       owner: { name: "Sarah Taylor", rating: 4.9 },
@@ -34,11 +49,11 @@ export default function Discover({ setPage }) {
   ];
 
   // Open property full details
-  if (selected) return <Details property={selected} close={() => setSelected(null)} />;
+  if (selected)
+    return <Detail property={selected} close={() => setSelected(null)} />;
 
   return (
     <View style={[u.flex1, u.col, styles.background]}>
-
       {/* Header */}
       <Text
         style={[

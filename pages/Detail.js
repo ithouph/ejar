@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
 import { View, Text, Image, ScrollView, Dimensions, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons, Feather, FontAwesome } from "@expo/vector-icons";
+import { Share } from "react-native";
 
 import { useTheme } from "../theme/global";
-import { u } from "../theme/utility";
 
-import Renter from '../components/Renter'; // Your renter details component
+import Renter from './Renter'; // Your renter details componefnt
 
 const facilities = [
   { label: 'Temple', icon: '🏛️' },
@@ -35,8 +35,10 @@ const photos = [
 
 export default function Detail(setPage, close) {
   const { colors, u } = useTheme();
+ 
   const [selected, setSelected] = useState(null);
   const scrollViewRef = useRef();
+ 
   const [reviewText, setReviewText] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -87,7 +89,7 @@ export default function Detail(setPage, close) {
           </View>
         </View>
       </View>
-      <ScrollView style={styles.container}>
+      <ScrollView style={[styles.container, {padding: 16}]}>
         {/* Property Section */}
         <View style={{ position: 'relative', marginBottom: 20, }}>
           <ScrollView
@@ -131,7 +133,7 @@ export default function Detail(setPage, close) {
         <Text style={styles.propertyTitle}>
           Classical House <Text style={styles.rating}>⭐ 4.0</Text>
         </Text>
-        <Text style={styles.propertyLocation}>4]=-, Punjab</Text>
+        <Text style={styles.propertyLocation}>Ludhiana, Punjab</Text>
         {/* Description */}
         <Text style={styles.description}>
           Nestled among rolling hills picturesque...

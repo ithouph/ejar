@@ -1,126 +1,23 @@
 import React, { useState } from "react";
 import { View } from "react-native";
 
-import SignIn from "./auth/Signin";
-import SignUp from "./auth/Signup";
+
+// import from "./auth/";
+import SignIn from "./auth/signin";
+import SignUp from "./auth/signup";
+
 // import from "./routers/";
 import Discover from "./router/Discover";
 import Explore from "./router/Explore";
 import Saved from "./router/Saved";
 import Profile from "./router/Profile";
 
-
-import { useTheme } from "./theme/useTheme";
-
-export default function App() {
-  const [page, setPage] = useState("signIn"); // signIn or signUp
-  const { colors } = useTheme();
-
-  return (
-    <View style={{ flex: 1, backgroundColor: colors.background }}>
-      {page === "signIn" ? (
-        <SignIn goToSignUp={() => setPage("signUp")} />
-      ) : (
-        <SignUp goToSignIn={() => setPage("signIn")} />
-      )}
-    </View>
-  );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import Detail from "./pages/Detail";
 
-
+// import NavBar from "./components/Navbar";
 import NavBar from "./components/Navbar";
 
+// useTheme hook
 import { useTheme } from "./theme/global";
 
 export default function App() {
@@ -173,8 +70,6 @@ export default function App() {
           <NavBar page={page} setPage={setPage} />
         </View>
       )}
-
-
     </View>
   );
 }
