@@ -17,6 +17,7 @@ import { useTheme } from "../theme/global";
 import { u } from "../theme/utility";
 
 const { width: screenWidth } = Dimensions.get("window");
+const widthPercent = screenWidth * 0.99; // 80% of screen width
 
 export default function Card({ item, onPress }) {
   const { colors } = useTheme();
@@ -56,7 +57,7 @@ export default function Card({ item, onPress }) {
   };
 
   return (
-    <View style={[u.mb10, u.p10, u.border]}>
+    <View style={[u.mb10, u.border]}>
       {/* Multi-image carousel */}
       <View style={{ position: "relative" }}>
         <ScrollView
@@ -67,12 +68,19 @@ export default function Card({ item, onPress }) {
           onScroll={onScroll}
           scrollEventThrottle={16}
           style={{ width: screenWidth, height: 250 }}
+          contentContainerStyle={{ paddingHorizontal: 0, marginHorizontal: 0 }}
         >
           {item.images.map((imgUrl, idx) => (
             <Placeholder
               key={idx}
-              style={{ width: screenWidth, height: 250, borderRadius: 20 }}
+              style={[u.px5,{
+                width: widthPercent,
+                height: 250,
+                borderRadius: 20,
+                overflow: "hidden",
+              }]}
               source={{ uri: imgUrl }}
+              resizeMode="cover" // ensure cover fill
             />
           ))}
         </ScrollView>
@@ -134,10 +142,10 @@ export default function Card({ item, onPress }) {
             {item.name}
           </Text>
           <Text style={{ color: colors.textSecondary, marginTop: 2 }}>
-            {item.address}
+            {item.description}
           </Text>
           <Text style={{ color: colors.textSecondary, marginTop: 4 }}>
-            {item.details[0]} • {item.details[1]}
+            {item.address} • {item.address}
           </Text>
         </View>
       </TouchableOpacity>

@@ -8,64 +8,60 @@ export default function NavBar({ page, setPage }) {
   const defaultColor = "#165a4a"; // Your default icon/text color
 
   return (
-    <View style={[styles.container, u.container]}>
+    <View style={[styles.container, u.container, colors.background]}>
       <TouchableOpacity style={u.navItem} onPress={() => setPage("Discover")}>
         <Ionicons
           name={page === "Discover" ? "home" : "home-outline"}
-          size={26}
+          size={28}
           color={page === "Discover" ? colors.primary : defaultColor}
         />
         <Text style={[
-          u.navLabel, 
+          u.navLabel,u.px10,
           page === "Discover" && u.navLabelActive, 
           { color: page === "Discover" ? colors.primary : defaultColor }
         ]}>
-          Home
         </Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={u.navItem} onPress={() => setPage("Explore")}>
         <Ionicons
           name={page === "Explore" ? "search" : "search-outline"}
-          size={26}
+          size={28}
           color={page === "Explore" ? colors.primary : defaultColor}
         />
         <Text style={[
-          u.navLabel, 
+          u.navLabel,u.px10,
           page === "Explore" && u.navLabelActive, 
           { color: page === "Explore" ? colors.primary : defaultColor }
         ]}>
-          Search
         </Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={u.navItem} onPress={() => setPage("Saved")}>
         <Ionicons
           name={page === "Saved" ? "heart" : "heart-outline"}
-          size={26}
+          size={28}
           color={page === "Saved" ? colors.primary : defaultColor}
         />
         <Text style={[
-          u.navLabel, 
+          u.navLabel,u.px10, 
           page === "Saved" && u.navLabelActive, 
           { color: page === "Saved" ? colors.primary : defaultColor }
         ]}>
-          Saved
         </Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={u.navItem} onPress={() => setPage("Profile")}>
+      <TouchableOpacity style={u.navItem} onPress={() => setPage("Settings")}>
         <Ionicons
-          name={page === "Profile" ? "person" : "person-outline"}
-          size={26}
-          color={page === "Profile" ? colors.primary : defaultColor}
+          name={page === "Settings" ? "person" : "person-outline"}
+          size={28}
+          color={page === "Settings" ? colors.primary : defaultColor}
         />
         <Text style={[
-          u.navLabel, 
-          page === "Profile" && u.navLabelActive, 
-          { color: page === "Profile" ? colors.primary : defaultColor }
+          u.navLabel,u.px10, 
+          page === "Settings" && u.navLabelActive, 
+          { color: page === "Settings" ? colors.primary : defaultColor }
         ]}>
-          Account
         </Text>
       </TouchableOpacity>
     </View>
@@ -78,9 +74,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
     paddingVertical: 14,
-    paddingBottom: 30,
+    paddingBottom: 20,
     borderTopWidth: 1,
-    backgroundColor: "#fff",
     borderTopColor: "#e5e5e5",
   },
 });

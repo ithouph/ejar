@@ -1,15 +1,35 @@
 import React from "react";
-import { View, Text, useColorScheme } from "react-native";
-import { lightColors, darkColors } from "../theme/colors";
-import { u } from "../theme/utility";
+import { View, Text } from "react-native";
+import { useTheme } from "../theme/global";
 
 export default function Header({ title }) {
-  const scheme = useColorScheme();
-  const colors = scheme === "dark" ? darkColors : lightColors;
+  const { colors, u } = useTheme();
 
   return (
-    <View style={[u.header, { backgroundColor: colors.cardBg, borderBottomColor: colors.border, borderBottomWidth: 1 }]}>
-      <Text style={[u.text2Xl, u.textBold, { color: colors.text }]}>{title}</Text>
+    <View
+      style={[
+        u.header,
+        {
+          backgroundColor: colors.cardBg,
+          borderBottomColor: colors.border,
+          borderBottomWidth: 1,
+        },
+      ]}
+    >
+      <Text
+        style={[
+          u.textXl,
+          u.textBold,
+          u.mb0,
+          u.border,
+          u.p20,
+          u.pt80,
+          u.borderColor,
+          { color: colors.txt },
+        ]}
+      >
+        {title}
+      </Text>
     </View>
   );
 }

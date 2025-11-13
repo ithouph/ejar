@@ -10,7 +10,7 @@ import SignUp from "./auth/signup";
 import Discover from "./router/Discover";
 import Explore from "./router/Explore";
 import Saved from "./router/Saved";
-import Profile from "./router/Profile";
+import Settings from "./router/Settings";
 
 import Detail from "./pages/Detail";
 
@@ -58,9 +58,9 @@ export default function App() {
           <NavBar page={page} setPage={setPage} />
         </View>
       )}
-      {page === "Profile" && (
+      {page === "Settings" && (
         <View style={{ flex: 1 }}>
-          <Profile />
+          <Settings />
           <NavBar page={page} setPage={setPage} />
         </View>
       )}

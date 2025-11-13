@@ -25,9 +25,9 @@ const facilities = [
 const { width: screenWidth } = Dimensions.get("window");
 
 const photos = [
-  require("../assets/scroll/pic1.jpg"),
-  require("../assets/scroll/pic2.jpg"),
-  require("../assets/scroll/pic3.jpg"),
+  require("../assets/icon.png"),
+  require("../assets/icon.png"),
+  require("../assets/icon.png"),
 ];
 
 export default function Detail(setPage, close) {

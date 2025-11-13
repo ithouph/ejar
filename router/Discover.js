@@ -3,6 +3,7 @@ import { View, Text, ScrollView } from "react-native";
 // import components
 import Detail from "../pages/Detail";
 import Card from "../components/Card";
+import Header from "../components/Header";
 // import theme hook
 import { useTheme } from "../theme/global";
 import { savedList } from "../datafield";
@@ -17,21 +18,7 @@ export default function Discover({ setPage }) {
 
   return (
     <View style={[u.flex1, u.col, styles.background]}>
-      {/* Header */}
-      <Text
-        style={[
-          u.textXl,
-          u.textBold,
-          u.mb0,
-          u.border,
-          u.p20,
-          u.pt80,
-          u.borderColor,
-          { color: colors.txt },
-        ]}
-      >
-        Welcome, Sidi
-      </Text>
+     <Header title="Welcome, Sidi"></Header> 
 
       {/* Property List */}
       <ScrollView showsVerticalScrollIndicator={false}>

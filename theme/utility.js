@@ -13,7 +13,7 @@ export const u = StyleSheet.create({
 
   // navbar
   navItem: { alignItems: "center" },
-  navLabel: { fontSize: 12, color: "#8e8e8e", marginTop: 3 },
+  navLabel: { fontSize: 12, marginTop: 3 },
   navLabelActive: { color: "#044468", fontWeight: "600" },
   // borderRadius
   br8: { borderRadius: 8 },
@@ -23,6 +23,7 @@ export const u = StyleSheet.create({
   // Spacing - padding
   p0: { padding: 0 },
   p5: { padding: 5 },
+  p8: { padding: 8 },
   p10: { padding: 10 },
   p15: { padding: 15 },
   p20: { padding: 20 },
@@ -134,7 +135,7 @@ export const createStyles = (colors = {}) => ({
   link: { color: colors.link },
 
   background: { backgroundColor: colors.background },
-
+  BgSecondary: { backgroundColor: colors.NavBg},
   // Inputs
   inp: {
     backgroundColor: colors.inpbg,
