@@ -13,9 +13,13 @@ export const u = StyleSheet.create({
 
   // navbar
   navItem: { alignItems: "center" },
-  navLabel: { fontSize: 12, color: "#8e8e8e", marginTop: 3,},
-  navLabelActive: { color: "#044468", fontWeight: "600"},
-
+  navLabel: { fontSize: 12, color: "#8e8e8e", marginTop: 3 },
+  navLabelActive: { color: "#044468", fontWeight: "600" },
+  // borderRadius
+  br8: { borderRadius: 8 },
+  br12: { borderRadius: 12 },
+  br16: { borderRadius: 16 },
+  br50: { borderRadius: "50%"},
   // Spacing - padding
   p0: { padding: 0 },
   p5: { padding: 5 },
@@ -88,6 +92,7 @@ export const u = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  borderTop: { borderColor: "#0059ff18", borderTopWidth: 1 },
   btnScecondary: {
     padding: 15,
     borderRadius: 8,
@@ -106,9 +111,23 @@ export const u = StyleSheet.create({
 
   // Card / Containers
   card: { borderRadius: 12, overflow: "hidden", marginBottom: 10 },
+
+  // Custom for Detail
+  propertyTitle: { fontWeight: "bold", fontSize: 18, marginTop: 4 },
+  rating: { color: "#FFD700", fontWeight: "bold", fontSize: 16 },
+  textGray: { color: "#8e8e8e" },
+  textMuted: { color: "#777" },
+  avatar: { width: 50, height: 50, borderRadius: 25 },
+  avatarSm: { width: 36, height: 36, borderRadius: 18 },
+  facilityIcon: { fontSize: 23 },
+  facilityLabel: { fontSize: 12 },
+  detailIcon: { fontSize: 15 },
+  rentText: { color: "#fff", fontSize: 15 },
+  rentPrice: { color: "#fff", fontWeight: "bold", fontSize: 15 }
 });
 
-// ✅ Dynamic styles helper (use colors here)
+
+// ✅ Dynamic styles helper
 export const createStyles = (colors = {}) => ({
   txt: { color: colors.txt },
   textSecondary: { color: colors.textSecondary },
@@ -125,7 +144,6 @@ export const createStyles = (colors = {}) => ({
   btnPrimary: {
     color: colors.btnPrimary,
   },
-  // Buttons
   btn: {
     backgroundColor: colors.primary,
     alignItems: "center",
@@ -145,11 +163,7 @@ export const createStyles = (colors = {}) => ({
     alignItems: "center",
     justifyContent: "center",
   },
-
-  // Containers
   container: { flex: 1, padding: 20, backgroundColor: colors.background },
-
-  // Card
   card: {
     backgroundColor: colors.cardBg,
     borderColor: colors.border,

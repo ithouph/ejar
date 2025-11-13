@@ -2,14 +2,14 @@ export const lightColors = {
   background: "#ffffff",
   txt: "#111",
   txtw: "#fff",
-  textSecondary: "#555",
+  textSecondary: "#495057",
   placeholder: "#495057",
   inputBackground: "#f1f1f1",
   btn: "#F5F7FB",
   btnText: "#fff",
   btnTxt: "#111",
   primary: "#165a4a",       // Bootstrap Primary
-  secondary: "#6c757d",     // Bootstrap Secondary
+  secondary: "#030303ff",     // Bootstrap Secondary
   success: "#28a745",       // Bootstrap Success
   danger: "#dc3545",        // Bootstrap Danger
   warning: "#ffc107",       // Bootstrap Warning
@@ -30,7 +30,7 @@ export const darkColors = {
   background: "#0D1117",
   txt: "#fff",
   txtw: "#fff",
-  textSecondary: "#ccc",
+  textSecondary: "#b0b5b9ff",
   placeholder: "#5c656dff",
   inputBackground: "#1B1F27",
   btnTxt: "#000",
@@ -38,6 +38,7 @@ export const darkColors = {
   primary: "#fff",       // Bootstrap Primary
   secondary: "#6c757d",     // Bootstrap Secondary
   success: "#28a745",       // Bootstrap Success
+  primary: "#165a4a",       // Bootstrap Primary
   danger: "#dc3545",        // Bootstrap Danger
   warning: "#ffc107",       // Bootstrap Warning
   info: "#17a2b8",          // Bootstrap Info
